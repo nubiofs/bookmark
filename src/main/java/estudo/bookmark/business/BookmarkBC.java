@@ -18,6 +18,7 @@ public class BookmarkBC extends DelegateCrud<Bookmark, Long, BookmarkDAO> {
 	@Transactional
 	public void load() {
 		if (findAll().isEmpty()) {
+			insert(new Bookmark("Meu Github", "https://github.com/nubiofs"));
 			insert(new Bookmark("Portal", "http://www.frameworkdemoiselle.gov.br"));
 			insert(new Bookmark("Documentação", "http://demoiselle.sourceforge.net/docs/framework/reference"));
 			insert(new Bookmark("Fórum", "http://pt.stackoverflow.com/tags/demoiselle"));

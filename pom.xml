@@ -20,6 +20,7 @@
 	</parent>
 
 	<dependencies>
+	
 		<!-- Demoiselle dependencies -->
 		<dependency>
 			<groupId>br.gov.frameworkdemoiselle</groupId>
@@ -58,5 +59,7 @@
 			<version>4.3.4</version><!--$NO-MVN-MAN-VER$-->
 			<scope>test</scope>
 		</dependency>
+		
 	</dependencies>
+	
 </project>
