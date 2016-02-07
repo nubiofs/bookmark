@@ -194,8 +194,11 @@ public class BookmarkRESTTest {
 				new TypeReference<Set<UnprocessableEntityException.Violation>>() {
 				});
 		expected = new UnprocessableEntityException();
-		expected.addViolation("description", "não pode ser nulo");
-		expected.addViolation("link", "não pode ser nulo");
+		String notNull = "may not be null";
+		//expected.addViolation("description", "não pode ser nulo");
+		//expected.addViolation("link", "não pode ser nulo");
+		expected.addViolation("description", notNull);
+		expected.addViolation("link", notNull);
 		assertEquals(expected.getViolations(), violations);
 
 		bookmark = new Bookmark();
@@ -291,8 +294,11 @@ public class BookmarkRESTTest {
 				new TypeReference<Set<UnprocessableEntityException.Violation>>() {
 				});
 		expected = new UnprocessableEntityException();
-		expected.addViolation("description", "não pode ser nulo");
-		expected.addViolation("link", "não pode ser nulo");
+		String notNull = "may not be null";
+		//expected.addViolation("description", "não pode ser nulo");
+		expected.addViolation("description", notNull);
+		//expected.addViolation("link", "não pode ser nulo");
+		expected.addViolation("link", notNull);
 		assertEquals(expected.getViolations(), violations);
 
 		bookmark = new Bookmark();
